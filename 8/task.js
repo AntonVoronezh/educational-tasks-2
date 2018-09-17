@@ -1,9 +1,8 @@
 const diff = (a, b) => {
   let result = 0;
   let x = 0;
-  let y = 0;
 
-  if (a >= b){
+  if (a >= b) {
     x = a - b;
   } else {
     x = b - a;
@@ -17,4 +16,3 @@ const diff = (a, b) => {
 
   return result;
 };
-
