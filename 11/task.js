@@ -7,24 +7,20 @@ const sumOfSquareDigits = (num) => {
     const digit = Number(numAsStr[i]);
     sum += digit * digit;
   }
-
   return sum;
 };
 
-// BEGIN (write your solution here)
-
 const isHappyNumber = (num) => {
-  let result = sumOfSquareDigits(num); 
+  let result = sumOfSquareDigits(num);
 
-      for (let i = 0; i < 10; i += 1) {
-        result = sumOfSquareDigits(result); 
-        console.log(result);
-          if (result === 1) {
-            return true; break;
-            }
-       }
+  for (let i = 0; i < 10; i += 1) {
+    result = sumOfSquareDigits(result);
+    console.log(result);
+    if (result === 1) {
+      return true;
+    }
+  }
 
-return false;  
+  return false;
 };
-
 export default isHappyNumber;
